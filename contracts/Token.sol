@@ -7,14 +7,14 @@ contract Token {
     string public name = "My new token";
     string public symbol = "MNT";
 
-    uint256 public maxSuply = 1000000;
+    uint256 public totalSupply = 1000000;
     address public owner;
 
     mapping(address => uint256) balances;
 
     constructor() {
         owner = msg.sender;
-        balances[owner] = maxSuply;
+        balances[owner] = totalSupply;
     }
 
     function transfer(address to, uint256 amount) external {
