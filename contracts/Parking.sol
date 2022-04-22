@@ -12,4 +12,8 @@ contract Parking {
     function addPPM(string memory name) public {
         ppms[msg.sender].push(PPM(name, "1"));
     }
+
+    function getPPMs() public view returns (PPM[] memory) {
+        return ppms[msg.sender];
+    }
 }
